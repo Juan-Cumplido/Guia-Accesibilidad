@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical Guide to Web Accessibility</title>
+  <link rel="stylesheet" href="./css/styles_home.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand-bar">
+      <p class="site-title">Practical Guide to Web Accessibility</p>
+      <p class="site-subtitle">How to integrate web accessibility into software development</p>
+    </div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">Requirements</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Implementation</a></li>
+        <li><a href="#">Testing</a></li>
+        <li><a href="artifacts.html">Artifacts</a></li>
+        <li><a href="practices.html">Practices</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <span class="decorative-lines" aria-hidden="true"></span>
+
+        <h1 id="hero-title">Build accessible web projects from the beginning</h1>
+
+        <p>
+          Learn how to incorporate web accessibility into each phase of the
+          software development life cycle. This guide provides practical
+          recommendations, reusable artifacts, WCAG references, examples, and
+          validation activities to support inclusive web development in academic
+          projects.
+        </p>
+
+        <a class="button button-light" href="#guide-content">Start exploring</a>
+      </div>
+
+      <div class="hero-illustration" aria-hidden="true">
+        <svg viewBox="0 0 280 220" role="img" focusable="false">
+          <rect x="90" y="35" width="150" height="95" rx="8" fill="none" stroke="currentColor" stroke-width="4"/>
+          <rect x="105" y="50" width="105" height="55" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+          <circle cx="225" cy="62" r="4" fill="currentColor"/>
+          <circle cx="210" cy="62" r="4" fill="currentColor"/>
+          <circle cx="195" cy="62" r="4" fill="currentColor"/>
+
+          <circle cx="80" cy="150" r="45" fill="none" stroke="currentColor" stroke-width="4"/>
+          <circle cx="180" cy="150" r="18" fill="none" stroke="currentColor" stroke-width="4"/>
+          <line x1="80" y1="105" x2="80" y2="150" stroke="currentColor" stroke-width="4"/>
+          <line x1="80" y1="150" x2="180" y2="150" stroke="currentColor" stroke-width="4"/>
+          <line x1="120" y1="105" x2="155" y2="150" stroke="currentColor" stroke-width="4"/>
+
+          <circle cx="85" cy="75" r="17" fill="currentColor"/>
+          <path d="M76 92 C85 115, 115 120, 135 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <path d="M135 100 L158 85" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+
+          <circle cx="170" cy="35" r="34" fill="white" stroke="currentColor" stroke-width="4"/>
+          <path d="M155 28 L170 18 V52 L155 42 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+          <line x1="190" y1="18" x2="145" y2="55" stroke="currentColor" stroke-width="4"/>
+
+          <ellipse cx="225" cy="132" rx="38" ry="22" fill="none" stroke="currentColor" stroke-width="4"/>
+          <circle cx="225" cy="132" r="10" fill="currentColor"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="guide-content" class="intro-section" aria-labelledby="guide-title">
+      <h2 id="guide-title">What will you find in this guide?</h2>
+
+      <p>
+        This guide organizes accessibility practices according to the software
+        development life cycle and connects each phase with concrete artifacts,
+        examples, and validation criteria.
+      </p>
+
+      <div class="card-grid">
+        <article class="info-card">
+          <h3>Reusable Artifacts</h3>
+          <p>
+            Templates for user stories, acceptance criteria, checklists,
+            reports, and accessible interface components.
+          </p>
+          <a class="button button-primary" href="artifacts.html">Learn more</a>
+        </article>
+
+        <article class="info-card">
+          <h3>WCAG References</h3>
+          <p>
+            Relevant WCAG criteria connected to each development phase and
+            accessibility practice.
+          </p>
+          <a class="button button-primary" href="practices.html">Learn more</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

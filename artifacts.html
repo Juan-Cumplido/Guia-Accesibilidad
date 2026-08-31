@@ -2,148 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artifacts | Practical Guide to Web Accessibility</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+  <title>Artifacts | WAPG</title>
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/site-header.css" />
+  <script src="./js/site-header.js" defer></script>
+  <script src="./js/resource-data.js" defer></script>
+  <script src="./js/catalog-renderer.js" defer></script>
+  <script src="./js/catalog-controls.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
-<header class="site-header">
-  <div class="brand-bar">
-    <p class="site-title">Practical Guide to Web Accessibility</p>
-    <p class="site-subtitle">How to integrate web accessibility into software development</p>
-  </div>
-
-  <nav class="main-nav" aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Requirements</a></li>
-      <li><a href="#">Design</a></li>
-      <li><a href="#">Implementation</a></li>
-      <li><a href="#">Testing</a></li>
-      <li><a href="artifacts.html" aria-current="page">Artifacts</a></li>
-      <li><a href="practices.html">Practices</a></li>
-    </ul>
-  </nav>
-</header>
-
+  <header class="site-header"></header>
   <main id="main-content" class="page-shell">
-    <h1 class="page-title">Artifacts</h1>
-
+    <h1 class="page-title">Accessibility artifacts</h1>
     <section class="read-first" aria-labelledby="artifacts-intro-title">
-      <svg aria-hidden="true" viewBox="0 0 220 150" focusable="false">
-  <path d="M47 124V72c0-21 15-38 35-38h10c21 0 38 17 38 38v52" fill="none" stroke="currentColor" stroke-width="3"/>
-  <path d="M73 72l23 20 29-22" fill="none" stroke="currentColor" stroke-width="3"/>
-  <circle cx="91" cy="33" r="24" fill="currentColor"/>
-  <path d="M75 47c14 8 32 7 46-5" fill="none" stroke="#ffffff" stroke-width="3"/>
-  <circle cx="83" cy="55" r="3" fill="#ffffff"/>
-  <circle cx="104" cy="55" r="3" fill="#ffffff"/>
-  <path d="M126 88c20-3 35-8 48-20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-  <path d="M166 67c12-7 23-5 31-1" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-  <path d="M166 67c10 5 21 7 34 5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-</svg>
+      <img src="./assets/read-first-guide.png" alt="Illustration of a woman welcoming students to the artifact catalog" />
       <div>
-        <h2 id="artifacts-intro-title">Read This First</h2>
-        <p>
-          Accessibility artifacts help document, apply, and validate accessibility decisions
-          throughout the software development life cycle.
-        </p>
+        <h2 id="artifacts-intro-title">Read this first</h2>
+        <p>Artifacts preserve accessibility decisions and evidence across requirements, design, implementation, and testing. Each page explains how to create the artifact, shows an accessible comparison, maps starting WCAG criteria, and links it to a related practice.</p>
       </div>
     </section>
-
     <section class="filter-panel" aria-labelledby="artifact-filter-title">
-      <h2 id="artifact-filter-title">Read This First</h2>
-
+      <h2 id="artifact-filter-title">Filter artifacts by title</h2>
       <div class="filter-row">
         <form class="search-control" role="search" aria-label="Filter artifacts">
-          <label for="artifact-search">Filter artifacts</label>
-          <input id="artifact-search" name="q" type="search" placeholder="Filter artifacts" />
+          <label for="artifact-search">Artifact title</label>
+          <input id="artifact-search" name="q" type="search" placeholder="For example, prototype or test report" />
         </form>
-
-        <div class="view-actions" aria-label="View options">
-          <button class="icon-button" type="button" aria-label="Show artifacts as a list">
-            <svg aria-hidden="true" viewBox="0 0 44 44" focusable="false">
-  <rect x="8" y="8" width="8" height="8" fill="currentColor"/>
-  <rect x="8" y="18" width="8" height="8" fill="currentColor"/>
-  <rect x="8" y="28" width="8" height="8" fill="currentColor"/>
-  <rect x="20" y="9" width="16" height="4" fill="currentColor"/>
-  <rect x="20" y="19" width="16" height="4" fill="currentColor"/>
-  <rect x="20" y="29" width="16" height="4" fill="currentColor"/>
-</svg>
-          </button>
-          <button class="icon-button" type="button" aria-label="Show artifacts as a grid" aria-pressed="true">
-            <svg aria-hidden="true" viewBox="0 0 44 44" focusable="false">
-  <rect x="7" y="7" width="13" height="13" fill="currentColor"/>
-  <rect x="24" y="7" width="13" height="13" fill="currentColor"/>
-  <rect x="7" y="24" width="13" height="13" fill="currentColor"/>
-  <rect x="24" y="24" width="13" height="13" fill="currentColor"/>
-</svg>
-          </button>
+        <div class="view-actions" aria-label="Artifact view options">
+          <button class="icon-button" type="button" data-view="list" aria-label="Show artifacts as a list" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M8 10h7v7H8zm0 13h7v7H8zm12-11h17M20 25h17" stroke="currentColor" stroke-width="4" fill="none" /></svg></button>
+          <button class="icon-button" type="button" data-view="grid" aria-label="Show artifacts as a grid" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M7 7h13v13H7zm17 0h13v13H24zM7 24h13v13H7zm17 0h13v13H24z" fill="currentColor" /></svg></button>
         </div>
       </div>
     </section>
-
-    <section class="card-grid" aria-label="Accessibility artifacts">
-      <article class="resource-card">
-        <div class="card-heading">
-          <svg aria-hidden="true" viewBox="0 0 64 64" focusable="false">
-  <rect x="26" y="5" width="12" height="10" fill="none" stroke="currentColor" stroke-width="2"/>
-  <rect x="6" y="28" width="14" height="10" fill="none" stroke="currentColor" stroke-width="2"/>
-  <rect x="44" y="28" width="14" height="10" fill="none" stroke="currentColor" stroke-width="2"/>
-  <rect x="26" y="49" width="12" height="10" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-  <path d="M32 15v9M20 33h4M40 33h4M32 40v9" stroke="currentColor" stroke-width="2"/>
-</svg>
-          <h2>Domain Model</h2>
-        </div>
-        <p>
-          A domain model represents the main concepts, entities, and relationships
-          of a system. It helps students understand the problem context before
-          defining interface and accessibility requirements.
-        </p>
-        <a class="card-link" href="#">View artifact</a>
-      </article>
-
-      <article class="resource-card">
-        <div class="card-heading">
-          <svg aria-hidden="true" viewBox="0 0 64 64" focusable="false">
-  <path d="M21 8h28l7 7v41H21z" fill="none" stroke="currentColor" stroke-width="2"/>
-  <path d="M49 8v8h7" fill="none" stroke="currentColor" stroke-width="2"/>
-  <ellipse cx="40" cy="24" rx="12" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-  <ellipse cx="40" cy="37" rx="12" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-  <ellipse cx="40" cy="50" rx="12" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="11" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
-  <path d="M11 23v21M5 31h12M7 58l4-14 4 14" fill="none" stroke="currentColor" stroke-width="2"/>
-</svg>
-          <h2>Use Cases</h2>
-        </div>
-        <p>
-          Use cases describe how users interact with a system to achieve specific
-          goals. In this guide, they help identify where accessibility needs should
-          be considered during interaction flows.
-        </p>
-        <a class="card-link" href="#">View artifact</a>
-      </article>
-
-      <article class="resource-card">
-        <div class="card-heading">
-          <svg aria-hidden="true" viewBox="0 0 64 64" focusable="false">
-  <path d="M20 8h28l8 8v40H20z" fill="none" stroke="currentColor" stroke-width="2"/>
-  <path d="M48 8v9h8M30 26h17M30 35h17M30 44h12" stroke="currentColor" stroke-width="2"/>
-  <circle cx="15" cy="26" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-  <path d="M4 56c1-11 7-18 15-18s14 7 15 18" fill="none" stroke="currentColor" stroke-width="2"/>
-</svg>
-          <h2>User Stories</h2>
-        </div>
-        <p>
-          User stories describe system features from the user's perspective. They
-          help translate user needs into clear development tasks and acceptance
-          criteria.
-        </p>
-        <a class="card-link" href="user-stories.html">View artifact</a>
-      </article>
-    </section>
+    <section class="card-grid" data-resource-catalog="artifact" aria-label="Accessibility artifacts"></section>
   </main>
 </body>
 </html>

@@ -6,145 +6,18 @@
   <title>Accessible User Stories | Practical Guide to Web Accessibility</title>
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/site-header.css" />
+  <script src="./js/translations-es.js" defer></script>
+  <script src="./js/resource-translations-es.js" defer></script>
+  <script src="./js/i18n.js" defer></script>
   <script src="./js/site-header.js" defer></script>
+  <script src="./js/resource-data.js" defer></script>
+  <script src="./js/resource-detail.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="site-header"></header>
 
-  <main id="main-content" class="page-shell">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="practices.html">Practices</a></li>
-        <li aria-current="page">User Stories</li>
-      </ol>
-    </nav>
-
-    <div class="practice-layout">
-      <aside class="side-card" aria-labelledby="page-contents-title">
-        <h2 id="page-contents-title">Page contents</h2>
-        <nav aria-label="Practice sections">
-          <ul>
-            <li><a href="#about">About this practice</a></li>
-            <li><a href="#structure">Structure</a></li>
-            <li><a href="#example">Example</a></li>
-            <li><a href="#acceptance-criteria">Acceptance criteria</a></li>
-            <li><a href="#keyboard-interaction">Keyboard interaction</a></li>
-          </ul>
-        </nav>
-      </aside>
-
-      <article class="practice-main">
-        <h1>Accessible User Stories</h1>
-
-        <p class="practice-lead">
-          Requirement practice that documents accessibility needs in an agile format
-          and maintains traceability with acceptance criteria, backlog items, and tests.
-        </p>
-
-        <section id="about" class="content-box" aria-labelledby="about-title">
-          <h2 id="about-title">About this practice</h2>
-          <div class="content-box-body">
-            <p>Here you should answer three things:</p>
-
-            <dl class="definition-list">
-              <div>
-                <dt>What it is</dt>
-                <dd>
-                  An accessible user story is a story written from the user's need,
-                  explicitly incorporating an accessibility condition that can be verified.
-                </dd>
-              </div>
-
-              <div>
-                <dt>What it is for</dt>
-                <dd>
-                  It helps translate accessibility requirements into an understandable
-                  format for analysis, design, development, and testing.
-                </dd>
-              </div>
-
-              <div>
-                <dt>When to use it</dt>
-                <dd>
-                  Mainly in the requirements phase, during elicitation, backlog refinement,
-                  and definition of acceptance criteria.
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </section>
-
-        <section id="structure" class="content-box" aria-labelledby="structure-title">
-          <h2 id="structure-title">Structure of the practice</h2>
-          <div class="content-box-body">
-            <p>
-              Accessible user stories extend traditional agile user stories by explicitly
-              incorporating accessibility requirements and verifiable acceptance criteria.
-              This structure helps development teams understand user needs, design inclusive
-              solutions, and validate accessibility throughout the software development life cycle.
-            </p>
-          </div>
-        </section>
-
-        <section id="example" class="content-box" aria-labelledby="example-title">
-          <h2 id="example-title">Example</h2>
-          <div class="content-box-body">
-            <div class="example-story">
-              <p>
-                <strong>As a keyboard-only user,</strong> I want to move through the form
-                fields in a logical order so that I can complete the registration process
-                without using a mouse.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="acceptance-criteria" class="content-box" aria-labelledby="criteria-title">
-          <h2 id="criteria-title">Acceptance criteria</h2>
-          <div class="content-box-body">
-            <ul class="criteria-list">
-              <li>All interactive elements can be reached using the keyboard.</li>
-              <li>The focus order follows the visual and logical reading sequence.</li>
-              <li>Errors are identified with text and are announced in a clear way.</li>
-              <li>The story is linked to the corresponding WCAG criteria.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="keyboard-interaction" class="content-box" aria-labelledby="keyboard-title">
-          <h2 id="keyboard-title">Keyboard interaction</h2>
-          <div class="content-box-body">
-            <ul class="keyboard-list">
-              <li><strong>Tab:</strong> moves focus to the next interactive element.</li>
-              <li><strong>Shift + Tab:</strong> moves focus to the previous interactive element.</li>
-              <li><strong>Enter or Space:</strong> activates buttons, links, and controls when applicable.</li>
-              <li><strong>Escape:</strong> closes dialogs, menus, or temporary panels when present.</li>
-            </ul>
-          </div>
-        </section>
-      </article>
-
-      <aside class="wcag-card" aria-labelledby="wcag-title">
-        <h2 id="wcag-title">WCAG Guidelines covered</h2>
-        <ul class="wcag-list">
-          <li>
-            <strong>2.1.1 Keyboard — Level A</strong>
-            The functionality must be operable without a mouse.
-          </li>
-          <li>
-            <strong>2.4.3 Focus Order — Level A</strong>
-            The tab order must follow a logical sequence.
-          </li>
-          <li>
-            <strong>3.3.1 Error Identification — Level A</strong>
-            Errors must be indicated in a clear and detectable way.
-          </li>
-        </ul>
-      </aside>
-    </div>
-  </main>
+  <main id="main-content" class="page-shell" data-resource-detail data-resource-type="practice" data-resource-slug="accessible-user-stories" data-resource-base="./"></main>
 </body>
 </html>

@@ -95,9 +95,9 @@
   ];
 
   const levelDetails = {
-    foundation: { label: "Foundation", semesters: "Suggested for semesters 2–4", note: "Start here. The page includes a guided procedure and a concrete example." },
+    foundation: { label: "Basic", semesters: "Suggested for semesters 2–4", note: "Start here. The page includes a guided procedure and a concrete example." },
     intermediate: { label: "Intermediate", semesters: "Suggested for semesters 4–6", note: "Requires familiarity with the software life cycle and basic WCAG concepts." },
-    advanced: { label: "Advanced", semesters: "Suggested for semesters 6–8", note: "Advanced resource: it involves formalization, specialist judgment, user research, automation, or organizational coordination." }
+    advanced: { label: "Advanced", semesters: "Suggested for semesters 6–9", note: "Advanced resource: it involves formalization, specialist judgment, user research, automation, or organizational coordination." }
   };
 
   const phaseDetails = {

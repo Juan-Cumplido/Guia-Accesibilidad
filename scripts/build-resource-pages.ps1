@@ -23,6 +23,9 @@ foreach ($match in $matches) {
   <title>$title | WAPG</title>
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/site-header.css" />
+  <script src="../js/translations-es.js" defer></script>
+  <script src="../js/resource-translations-es.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
   <script src="../js/site-header.js" defer></script>
   <script src="../js/resource-data.js" defer></script>
   <script src="../js/resource-detail.js" defer></script>

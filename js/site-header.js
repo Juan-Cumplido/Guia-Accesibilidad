@@ -34,6 +34,10 @@ const navigationMarkup = navigationItems
 document.querySelectorAll(".site-header").forEach((header) => {
   header.innerHTML = `
     <div class="brand-bar">
+      <div class="language-switch" role="group" aria-label="Language" data-no-translate>
+        <button type="button" data-language="es" lang="es" aria-pressed="true">Español</button>
+        <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
+      </div>
       <h1 class="site-title"><a href="${siteHref("index.html")}">Web Accessibility Practices Guide (WAPG)</a></h1>
       <p class="site-subtitle">How to integrate web accessibility into software development</p>
       <a class="university-name" href="https://www.uv.mx/">Universidad Veracruzana</a>
@@ -43,6 +47,10 @@ document.querySelectorAll(".site-header").forEach((header) => {
       <ul>${navigationMarkup}</ul>
     </nav>
   `;
+});
+
+document.querySelectorAll("[data-language]").forEach((button) => {
+  button.addEventListener("click", () => window.WAPG_I18N.setLanguage(button.dataset.language));
 });
 
 const primaryHeader = document.querySelector(".site-header");

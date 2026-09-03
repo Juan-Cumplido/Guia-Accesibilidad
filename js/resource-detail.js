@@ -202,5 +202,5 @@
         <p class="wcag-note">This mapping is a starting point. Select all criteria that apply to the actual content and functionality.</p>
         <ul class="wcag-list">${wcagMarkup}</ul>
       </aside>
-    </div>`;
+    </div>`.replaceAll('href="../', 'href="' + (host.dataset.resourceBase || "../"));
 })();

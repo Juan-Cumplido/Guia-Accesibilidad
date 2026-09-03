@@ -9,10 +9,16 @@ document.querySelectorAll(".filter-panel").forEach((panel) => {
   }
 
   const cards = Array.from(cardGrid.querySelectorAll(".resource-card"));
+  const levelControl = document.createElement("label");
+  levelControl.className = "level-filter";
+  levelControl.innerHTML = '<span>Level</span><select aria-label="Filter by level"><option value="all">All levels</option><option value="foundation">Basic</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select>';
+  panel.append(levelControl);
+  const levelSelect = levelControl.querySelector("select");
   const itemName = searchInput.id.includes("practice") ? "practices" : "artifacts";
   const status = document.createElement("p");
   status.className = "filter-status";
   status.setAttribute("aria-live", "polite");
+  status.setAttribute("data-no-translate", "");
   cardGrid.insertAdjacentElement("beforebegin", status);
 
   const normalizeText = (text) =>
@@ -24,7 +30,7 @@ document.querySelectorAll(".filter-panel").forEach((panel) => {
 
     cards.forEach((card) => {
       const title = card.querySelector(".card-heading h2, .card-heading h3")?.textContent || "";
-      const matches = normalizeText(title).includes(query);
+      const matches = normalizeText(title).includes(query) && (levelSelect.value === "all" || card.dataset.level === levelSelect.value);
       card.hidden = !matches;
 
       if (matches) {
@@ -32,9 +38,9 @@ document.querySelectorAll(".filter-panel").forEach((panel) => {
       }
     });
 
-    status.textContent = query
-      ? `${visibleCount} ${visibleCount === 1 ? itemName.slice(0, -1) : itemName} found.`
-      : "";
+    status.textContent = window.WAPG_I18N.language === "es"
+      ? `${visibleCount} ${itemName === "practices" ? (visibleCount === 1 ? "práctica encontrada" : "prácticas encontradas") : (visibleCount === 1 ? "artefacto encontrado" : "artefactos encontrados")}.`
+      : `${visibleCount} ${visibleCount === 1 ? itemName.slice(0, -1) : itemName} found.`;
   };
 
   const setView = (view) => {
@@ -48,8 +54,11 @@ document.querySelectorAll(".filter-panel").forEach((panel) => {
 
   searchForm.addEventListener("submit", (event) => event.preventDefault());
   searchInput.addEventListener("input", filterCards);
+  levelSelect.addEventListener("change", filterCards);
+  document.addEventListener("wapg:languagechange", filterCards);
 
   viewButtons.forEach((button) => {
     button.addEventListener("click", () => setView(button.dataset.view));
   });
+  filterCards();
 });

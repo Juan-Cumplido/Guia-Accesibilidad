@@ -47,6 +47,9 @@ foreach ($phase in $phases) {
   <title>$title | WAPG</title>
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/site-header.css" />
+  <script src="./js/translations-es.js" defer></script>
+  <script src="./js/resource-translations-es.js" defer></script>
+  <script src="./js/i18n.js" defer></script>
   <script src="./js/site-header.js" defer></script>
   <script src="./js/resource-data.js" defer></script>
   <script src="./js/catalog-renderer.js" defer></script>
@@ -64,16 +67,6 @@ foreach ($phase in $phases) {
     <section class="phase-overview" aria-labelledby="$slug-actions-title">
       <div><span class="section-kicker">What to do</span><h2 id="$slug-actions-title">Integrate accessibility during $slug</h2></div>
       <ol>$actionItems</ol>
-      <p class="learning-path"><strong>Learning path:</strong> begin with Foundation cards, continue with Intermediate resources, and use Advanced resources in semesters 6–8 or with specialist guidance.</p>
-    </section>
-    <section class="student-pathway" aria-labelledby="$slug-pathway-title">
-      <div class="pathway-heading"><span class="section-kicker">Progressive learning</span><h2 id="$slug-pathway-title">Choose a depth for your semester</h2><p>The resource level is guidance, not a restriction. A student can move forward when they can explain the user impact and verify the result.</p></div>
-      <ol>
-        <li><strong>Semester 2</strong><span>Follow Foundation procedures step by step and complete the provided comparison and checklist.</span></li>
-        <li><strong>Semester 4</strong><span>Create Foundation evidence independently and begin Intermediate resources with teacher feedback.</span></li>
-        <li><strong>Semester 6</strong><span>Connect Intermediate work across phases and perform selected Advanced activities with supervision.</span></li>
-        <li><strong>Semester 8</strong><span>Lead Advanced work, justify method choices, involve appropriate stakeholders, and document limitations.</span></li>
-      </ol>
     </section>
 $testingMethods
     <section class="phase-resource-controls" aria-labelledby="$slug-resources-title">

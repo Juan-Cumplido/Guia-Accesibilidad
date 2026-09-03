@@ -1,0 +1,22 @@
+.experiment-session .main-nav { display: none; }
+.experiment-session .site-header { position: static; }
+.experiment-shell { max-width: 1100px; margin-inline: auto; }
+.experiment-shell h1 { line-height: 1.2; }
+.experiment-groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; margin-block: 2rem; }
+.experiment-group, .experiment-task, .experiment-help, .experiment-template { padding: clamp(1rem,3vw,2rem); border: 1px solid #bdd2e6; border-radius: .5rem; margin-bottom: 1.5rem; }
+.experiment-group, .experiment-task { background: #eff7fe; }
+.experiment-help { border-left: 5px solid #18529d; }
+.experiment-group h2, .experiment-task h2, .experiment-help h2, .experiment-template h2 { margin-top: 0; }
+.experiment-field { display: grid; gap: .5rem; margin-bottom: 1.25rem; font-weight: 700; }
+.experiment-field textarea { width: 100%; min-height: 7rem; resize: vertical; padding: .8rem; font: 1rem/1.5 Consolas,monospace; color: #222; border: 1px solid #9aaec2; border-radius: .3rem; background: white; }
+.experiment-field textarea:focus-visible { outline: 3px solid #18529d; outline-offset: 2px; }
+.experiment-shell pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f3f5f8; padding: 1rem; border: 1px solid #d1d5db; }
+.experiment-shell li { margin-bottom: .65rem; }
+.experiment-shell iframe { width: 100%; height: 200px; border: 1px solid #9aaec2; background: white; }
+.experiment-note { font-size: .95rem; }
+.experiment-status { min-height: 1.6em; }
+.experiment-shell .button { background: #18529d; color: white; border: 0; border-radius: .35rem; padding: .85rem 1.2rem; font: inherit; font-weight: 700; cursor: pointer; }
+.experiment-shell .button:focus-visible { outline: 3px solid #18529d; outline-offset: 3px; }
+.experiment-help details { margin-top: 1rem; padding: .75rem; background: #eff7fe; }
+.experiment-help summary { cursor: pointer; font-weight: 700; }
+@media(max-width: 700px) { .experiment-groups { grid-template-columns: 1fr; } }

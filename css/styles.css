@@ -297,6 +297,10 @@ input:focus-visible {
   border-radius: var(--radius-sm);
 }
 
+.level-filter { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; font-weight: 700; }
+.level-filter select { max-width: 100%; min-height: 44px; padding: 0.45rem 2rem 0.45rem 0.75rem; color: var(--color-accent); background: #fff; border: 1px solid #9aaec2; border-radius: var(--radius-sm); font: inherit; }
+.level-filter select:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+
 .filter-panel h2 {
   margin: 0 0 var(--space-md);
   font-size: clamp(1.35rem, 3vw, 1.85rem);
@@ -550,6 +554,9 @@ input:focus-visible {
   box-shadow: var(--shadow-sm);
 }
 
+.resource-card--experiment { border: 2px solid #18529d; border-top-width: 6px; background: #eff7fe; }
+.experiment-badge { display: block; color: #113362; font-weight: 800; font-size: .8rem; margin-bottom: .5rem; }
+
 .card-heading {
   display: grid;
   grid-template-columns: 3.8rem 1fr;
@@ -748,7 +755,7 @@ input:focus-visible {
 }
 
 .level-callout--advanced strong::before {
-  content: "Advanced resource — ";
+  content: "";
 }
 
 .practice-lead {

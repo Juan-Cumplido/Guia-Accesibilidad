@@ -11,14 +11,13 @@ document.querySelectorAll(".filter-panel").forEach((panel) => {
   const cards = Array.from(cardGrid.querySelectorAll(".resource-card"));
   const levelControl = document.createElement("label");
   levelControl.className = "level-filter";
-  levelControl.innerHTML = '<span>Level</span><select aria-label="Filter by level"><option value="all">All levels</option><option value="foundation">Basic</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select>';
+  levelControl.innerHTML = '<span>Nivel</span><select aria-label="Filtrar por nivel"><option value="all">Todos los niveles</option><option value="foundation">Básico</option><option value="intermediate">Intermedio</option><option value="advanced">Avanzado</option></select>';
   panel.append(levelControl);
   const levelSelect = levelControl.querySelector("select");
   const itemName = searchInput.id.includes("practice") ? "practices" : "artifacts";
   const status = document.createElement("p");
   status.className = "filter-status";
   status.setAttribute("aria-live", "polite");
-  status.setAttribute("data-no-translate", "");
   cardGrid.insertAdjacentElement("beforebegin", status);
 
   const normalizeText = (text) =>
@@ -38,9 +37,7 @@ document.querySelectorAll(".filter-panel").forEach((panel) => {
       }
     });
 
-    status.textContent = window.WAPG_I18N.language === "es"
-      ? `${visibleCount} ${itemName === "practices" ? (visibleCount === 1 ? "práctica encontrada" : "prácticas encontradas") : (visibleCount === 1 ? "artefacto encontrado" : "artefactos encontrados")}.`
-      : `${visibleCount} ${visibleCount === 1 ? itemName.slice(0, -1) : itemName} found.`;
+    status.textContent = `${visibleCount} ${itemName === "practices" ? (visibleCount === 1 ? "práctica encontrada" : "prácticas encontradas") : (visibleCount === 1 ? "artefacto encontrado" : "artefactos encontrados")}.`;
   };
 
   const setView = (view) => {
@@ -55,7 +52,6 @@ document.querySelectorAll(".filter-panel").forEach((panel) => {
   searchForm.addEventListener("submit", (event) => event.preventDefault());
   searchInput.addEventListener("input", filterCards);
   levelSelect.addEventListener("change", filterCards);
-  document.addEventListener("wapg:languagechange", filterCards);
 
   viewButtons.forEach((button) => {
     button.addEventListener("click", () => setView(button.dataset.view));

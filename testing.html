@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
-  <title>Testing | WAPG</title>
+  <title>Pruebas | GPAW</title>
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/site-header.css" />
-  <script src="./js/translations-es.js" defer></script>
-  <script src="./js/resource-translations-es.js" defer></script>
-  <script src="./js/i18n.js" defer></script>
   <script src="./js/site-header.js" defer></script>
   <script src="./js/resource-data.js" defer></script>
   <script src="./js/catalog-renderer.js" defer></script>
   <script src="./js/phase-controls.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   <header class="site-header"></header>
   <main id="main-content" class="page-shell">
-    <h1 class="page-title">Testing</h1>
+    <h1 class="page-title">Pruebas</h1>
     <section class="read-first" aria-labelledby="testing-challenge-title">
-      <img src="./assets/read-first-guide.png" alt="Illustration of a woman presenting an accessibility challenge in the testing phase" />
-      <div><h2 id="testing-challenge-title">Read this first: the testing barrier</h2><p>Automated tools detect only a subset of WCAG. A high score can coexist with keyboard traps, confusing announcements, inaccessible tasks, or barriers experienced by real users. Testing must combine complementary evidence.</p></div>
+      <img src="./assets/read-first-guide-test.png" alt="Ilustración de una mujer presentando un desafío de accesibilidad en pruebas" />
+      <div><h2 id="testing-challenge-title">Lee esto primero: una barrera en pruebas</h2><p>Las herramientas automáticas detectan solo una parte de WCAG. Una puntuación alta puede coexistir con trampas de teclado, anuncios confusos, tareas inaccesibles o barreras para usuarios reales. Las pruebas deben combinar evidencias complementarias.</p></div>
     </section>
     <section class="phase-overview" aria-labelledby="testing-actions-title">
-      <div><span class="section-kicker">What to do</span><h2 id="testing-actions-title">Integrate accessibility during testing</h2></div>
-      <ol><li>Run automated checks continuously for reliably detectable failures.</li><li>Inspect keyboard, focus, zoom, reflow, semantics, errors, and assistive-technology behavior manually.</li><li>Evaluate critical tasks with representative users and combine conformance findings with task outcomes.</li></ol>
+      <div><span class="section-kicker">Qué hacer</span><h2 id="testing-actions-title">Integra la accesibilidad durante pruebas</h2></div>
+      <ol><li>Ejecuta comprobaciones automáticas continuamente para detectar fallos que puedan verificarse de forma fiable.</li><li>Inspecciona manualmente teclado, foco, zoom, redistribución, semántica, errores y comportamiento con tecnologías de apoyo.</li><li>Evalúa tareas críticas con usuarios representativos y combina los hallazgos de conformidad con los resultados de las tareas.</li></ol>
     </section>
     <section class="testing-methods" aria-labelledby="testing-evidence-title">
-      <h2 id="testing-evidence-title">Combine qualitative and quantitative evidence</h2>
-      <p>No single branch can demonstrate accessibility. Plan at least one method from each side when project scope and ethics allow it, and always explain remaining coverage gaps.</p>
+      <h2 id="testing-evidence-title">Combina evidencias cualitativas y cuantitativas</h2>
+      <p>Ninguna rama por sí sola demuestra accesibilidad. Planifica al menos un método de cada enfoque cuando el alcance y la ética lo permitan, y explica siempre las limitaciones de cobertura.</p>
       <div class="testing-branches">
-        <article class="testing-branch"><span class="branch-label">Qualitative branch 1</span><h3>Expert and manual review</h3><p>Use WCAG checklists, keyboard and focus inspection, screen readers, heuristic review, and Barrier Walkthroughs to explain why a barrier occurs and how severe its impact is.</p></article>
-        <article class="testing-branch"><span class="branch-label">Qualitative branch 2</span><h3>Evaluation with users</h3><p>Use observation, interviews, focus groups, think-aloud, and accessible co-evaluation with people with disabilities. Do not generalize a small sample to every user.</p></article>
-        <article class="testing-branch"><span class="branch-label">Quantitative branch 1</span><h3>Conformance and technical measures</h3><p>Count confirmed WCAG violations by criterion and severity, track coverage, and use tool scores only as a trend indicator—not as proof of conformance.</p></article>
-        <article class="testing-branch"><span class="branch-label">Quantitative branch 2</span><h3>Task performance measures</h3><p>Measure task completion, time, errors, assistance, and workload or satisfaction scales. Interpret numbers together with observations and participant context.</p></article>
+        <article class="testing-branch"><span class="branch-label">Rama cualitativa 1</span><h3>Revisión experta y manual</h3><p>Usa listas WCAG, inspección de teclado y foco, lectores de pantalla, revisión heurística y recorridos de barreras para explicar su causa y la gravedad de su impacto.</p></article>
+        <article class="testing-branch"><span class="branch-label">Rama cualitativa 2</span><h3>Evaluación con usuarios</h3><p>Usa observación, entrevistas, grupos focales, pensamiento en voz alta y coevaluación accesible con personas con discapacidad. No generalices una muestra pequeña a todos los usuarios.</p></article>
+        <article class="testing-branch"><span class="branch-label">Rama cuantitativa 1</span><h3>Medidas técnicas y de conformidad</h3><p>Cuenta incumplimientos WCAG confirmados por criterio y gravedad, registra la cobertura y usa las puntuaciones de herramientas solo como indicador de tendencias, no como prueba de conformidad.</p></article>
+        <article class="testing-branch"><span class="branch-label">Rama cuantitativa 2</span><h3>Medidas de desempeño en tareas</h3><p>Mide finalización de tareas, tiempo, errores, ayuda y escalas de carga de trabajo o satisfacción. Interpreta los números junto con las observaciones y el contexto de los participantes.</p></article>
       </div>
-      <div class="combination-callout"><strong>Recommendation:</strong> triangulate automation, manual or expert review, assistive technology, and user evidence before a release decision.</div>
+      <div class="combination-callout"><strong>Recomendación:</strong> combina automatización, revisión manual o experta, tecnologías de apoyo y evidencias de usuarios antes de decidir la publicación.</div>
     </section>
     <section class="phase-resource-controls" aria-labelledby="testing-resources-title">
-      <h2 id="testing-resources-title">Testing practices and artifacts</h2>
+      <h2 id="testing-resources-title">Prácticas y artefactos de pruebas</h2>
       <div class="phase-control-row">
-        <div class="resource-filter-actions" aria-label="Filter by resource type">
-          <button class="filter-button" type="button" data-resource-filter="all" aria-pressed="true">All</button>
-          <button class="filter-button" type="button" data-resource-filter="artifact" aria-pressed="false">Artifacts</button>
-          <button class="filter-button" type="button" data-resource-filter="practice" aria-pressed="false">Practices</button>
+        <div class="resource-filter-actions" aria-label="Filtrar por tipo de recurso">
+          <button class="filter-button" type="button" data-resource-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter-button" type="button" data-resource-filter="artifact" aria-pressed="false">Artefactos</button>
+          <button class="filter-button" type="button" data-resource-filter="practice" aria-pressed="false">Prácticas</button>
         </div>
-        <div class="view-actions" aria-label="View options">
-          <button class="icon-button" type="button" data-view="list" aria-label="Show resources as a list" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M8 10h7v7H8zm0 13h7v7H8zm12-11h17M20 25h17" stroke="currentColor" stroke-width="4" fill="none" /></svg></button>
-          <button class="icon-button" type="button" data-view="grid" aria-label="Show resources as a grid" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M7 7h13v13H7zm17 0h13v13H24zM7 24h13v13H7zm17 0h13v13H24z" fill="currentColor" /></svg></button>
+        <div class="view-actions" aria-label="Opciones de vista">
+          <button class="icon-button" type="button" data-view="list" aria-label="Mostrar recursos en lista" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M8 10h7v7H8zm0 13h7v7H8zm12-11h17M20 25h17" stroke="currentColor" stroke-width="4" fill="none" /></svg></button>
+          <button class="icon-button" type="button" data-view="grid" aria-label="Mostrar recursos en mosaico" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M7 7h13v13H7zm17 0h13v13H24zM7 24h13v13H7zm17 0h13v13H24z" fill="currentColor" /></svg></button>
         </div>
       </div>
     </section>
-    <section class="card-grid" data-phase-catalog="testing" aria-label="Testing accessibility practices and artifacts"></section>
+    <section class="card-grid" data-phase-catalog="testing" aria-label="Prácticas y artefactos de accesibilidad de pruebas"></section>
   </main>
 </body>
 </html>

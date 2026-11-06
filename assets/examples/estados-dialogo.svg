@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 458">
+  <title>D-03 · Estados de la revisión de inscripción</title>
+  <defs>
+    <marker id="transition" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1 1l8 4-8 4" fill="none" stroke="#273448"/>
+    </marker>
+  </defs>
+  <rect width="670" height="458" fill="#fff"/>
+  <g fill="#f6f8fa" stroke="#273448" stroke-width="1.5">
+    <rect x="39" y="80" width="151" height="55" rx="13"/>
+    <rect x="453" y="80" width="159" height="55" rx="13"/>
+    <rect x="453" y="239" width="159" height="55" rx="13"/>
+    <rect x="443" y="390" width="180" height="55" rx="13"/>
+  </g>
+  <g fill="none" stroke="#273448" stroke-width="1.5" marker-end="url(#transition)">
+    <path d="M115 33v47"/>
+    <path d="M190 106h263"/>
+    <path d="M453 123h-46v54H115v-42"/>
+    <path d="M533 135v104"/>
+    <path d="M453 266H75V135"/>
+    <path d="M533 294v96"/>
+  </g>
+  <circle cx="115" cy="24" r="9" fill="#273448"/>
+  <g fill="#273448" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">
+    <g font-weight="bold">
+      <text x="115" y="113">Formulario</text>
+      <text x="533" y="113">Diálogo abierto</text>
+      <text x="533" y="272">Guardando</text>
+      <text x="533" y="423">Confirmación</text>
+    </g>
+    <text x="321" y="81">Revisar inscripción /</text>
+    <text x="321" y="99">enfocar Volver</text>
+    <text x="263" y="198">Volver, Escape /</text>
+    <text x="263" y="218">enfocar Revisar inscripción</text>
+    <text x="599" y="163">Confirmar /</text>
+    <text x="599" y="183">restaurar foco</text>
+    <text x="599" y="203">e iniciar guardado</text>
+    <text x="263" y="289">guardadoRechazado /</text>
+    <text x="263" y="309">informar y conservar datos</text>
+    <text x="599" y="330">guardadoExitoso /</text>
+    <text x="599" y="350">mostrar y anunciar</text>
+    <text x="599" y="370">el folio</text>
+  </g>
+</svg>

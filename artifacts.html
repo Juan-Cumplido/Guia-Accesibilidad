@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
-  <title>Artifacts | WAPG</title>
+  <title>Artefactos | GPAW</title>
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/site-header.css" />
-  <script src="./js/translations-es.js" defer></script>
-  <script src="./js/resource-translations-es.js" defer></script>
-  <script src="./js/i18n.js" defer></script>
   <script src="./js/site-header.js" defer></script>
   <script src="./js/resource-data.js" defer></script>
   <script src="./js/catalog-renderer.js" defer></script>
   <script src="./js/catalog-controls.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   <header class="site-header"></header>
   <main id="main-content" class="page-shell">
-    <h1 class="page-title">Accessibility artifacts</h1>
+    <h1 class="page-title">Artefactos de accesibilidad</h1>
     <section class="read-first" aria-labelledby="artifacts-intro-title">
-      <img src="./assets/read-first-guide.png" alt="Illustration of a woman welcoming students to the artifact catalog" />
+      <img src="./assets/read-first-guide.png" alt="Ilustración de una mujer dando la bienvenida al catálogo de artefactos" />
       <div>
-        <h2 id="artifacts-intro-title">Read this first</h2>
-        <p>Artifacts preserve accessibility decisions and evidence across requirements, design, implementation, and testing. Each page explains how to create the artifact, shows an accessible comparison, maps starting WCAG criteria, and links it to a related practice.</p>
+        <h2 id="artifacts-intro-title">Lee esto primero</h2>
+        <p>Los artefactos conservan las decisiones y evidencias de accesibilidad en requisitos, diseño, implementación y pruebas. Cada página explica cómo crear el artefacto, compara ejemplos, relaciona criterios WCAG y enlaza una práctica asociada.</p>
       </div>
     </section>
     <section class="filter-panel" aria-labelledby="artifact-filter-title">
-      <h2 id="artifact-filter-title">Filter artifacts by title</h2>
+      <h2 id="artifact-filter-title">Buscar artefactos por título</h2>
       <div class="filter-row">
-        <form class="search-control" role="search" aria-label="Filter artifacts">
-          <label for="artifact-search">Artifact title</label>
-          <input id="artifact-search" name="q" type="search" placeholder="For example, prototype or test report" />
+        <form class="search-control" role="search" aria-label="Buscar artefactos">
+          <label for="artifact-search">Título del artefacto</label>
+          <input id="artifact-search" name="q" type="search" placeholder="Por ejemplo, prototipo o informe de pruebas" />
         </form>
-        <div class="view-actions" aria-label="Artifact view options">
-          <button class="icon-button" type="button" data-view="list" aria-label="Show artifacts as a list" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M8 10h7v7H8zm0 13h7v7H8zm12-11h17M20 25h17" stroke="currentColor" stroke-width="4" fill="none" /></svg></button>
-          <button class="icon-button" type="button" data-view="grid" aria-label="Show artifacts as a grid" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M7 7h13v13H7zm17 0h13v13H24zM7 24h13v13H7zm17 0h13v13H24z" fill="currentColor" /></svg></button>
+        <div class="view-actions" aria-label="Opciones de vista de artefactos">
+          <button class="icon-button" type="button" data-view="list" aria-label="Mostrar artefactos en lista" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M8 10h7v7H8zm0 13h7v7H8zm12-11h17M20 25h17" stroke="currentColor" stroke-width="4" fill="none" /></svg></button>
+          <button class="icon-button" type="button" data-view="grid" aria-label="Mostrar artefactos en mosaico" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M7 7h13v13H7zm17 0h13v13H24zM7 24h13v13H7zm17 0h13v13H24z" fill="currentColor" /></svg></button>
         </div>
       </div>
     </section>
-    <section class="card-grid" data-resource-catalog="artifact" aria-label="Accessibility artifacts"></section>
+    <section class="card-grid" data-resource-catalog="artifact" aria-label="Artefactos de accesibilidad"></section>
   </main>
 </body>
 </html>

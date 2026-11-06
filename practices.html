@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
-  <title>Practices | WAPG</title>
+  <title>Prácticas | GPAW</title>
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/site-header.css" />
-  <script src="./js/translations-es.js" defer></script>
-  <script src="./js/resource-translations-es.js" defer></script>
-  <script src="./js/i18n.js" defer></script>
   <script src="./js/site-header.js" defer></script>
   <script src="./js/resource-data.js" defer></script>
   <script src="./js/catalog-renderer.js" defer></script>
   <script src="./js/catalog-controls.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   <header class="site-header"></header>
   <main id="main-content" class="page-shell">
-    <h1 class="page-title">Accessibility practices</h1>
+    <h1 class="page-title">Prácticas de accesibilidad</h1>
     <section class="read-first" aria-labelledby="practices-intro-title">
-      <img src="./assets/read-first-guide.png" alt="Illustration of a woman welcoming students to the practice catalog" />
+      <img src="./assets/read-first-guide.png" alt="Ilustración de una mujer dando la bienvenida al catálogo de prácticas" />
       <div>
-        <h2 id="practices-intro-title">Read this first</h2>
-        <p>Practices are the actions a team performs to integrate accessibility across the software life cycle. Read their descriptions and filter by level to choose the practices you need.</p>
+        <h2 id="practices-intro-title">Lee esto primero</h2>
+        <p>Las prácticas son las acciones que realiza un equipo para integrar la accesibilidad a lo largo del ciclo de vida del software. Consulta su descripción y filtra por nivel para elegir las que necesitas.</p>
       </div>
     </section>
     <section class="filter-panel" aria-labelledby="practice-filter-title">
-      <h2 id="practice-filter-title">Filter practices by title</h2>
+      <h2 id="practice-filter-title">Buscar prácticas por título</h2>
       <div class="filter-row">
-        <form class="search-control" role="search" aria-label="Filter practices">
-          <label for="practice-search">Practice title</label>
-          <input id="practice-search" name="q" type="search" placeholder="For example, user testing or prototypes" />
+        <form class="search-control" role="search" aria-label="Buscar prácticas">
+          <label for="practice-search">Título de la práctica</label>
+          <input id="practice-search" name="q" type="search" placeholder="Por ejemplo, pruebas con usuarios o prototipos" />
         </form>
-        <div class="view-actions" aria-label="Practice view options">
-          <button class="icon-button" type="button" data-view="list" aria-label="Show practices as a list" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M8 10h7v7H8zm0 13h7v7H8zm12-11h17M20 25h17" stroke="currentColor" stroke-width="4" fill="none" /></svg></button>
-          <button class="icon-button" type="button" data-view="grid" aria-label="Show practices as a grid" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M7 7h13v13H7zm17 0h13v13H24zM7 24h13v13H7zm17 0h13v13H24z" fill="currentColor" /></svg></button>
+        <div class="view-actions" aria-label="Opciones de vista de prácticas">
+          <button class="icon-button" type="button" data-view="list" aria-label="Mostrar prácticas en lista" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M8 10h7v7H8zm0 13h7v7H8zm12-11h17M20 25h17" stroke="currentColor" stroke-width="4" fill="none" /></svg></button>
+          <button class="icon-button" type="button" data-view="grid" aria-label="Mostrar prácticas en mosaico" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M7 7h13v13H7zm17 0h13v13H24zM7 24h13v13H7zm17 0h13v13H24z" fill="currentColor" /></svg></button>
         </div>
       </div>
     </section>
-    <section class="card-grid" data-resource-catalog="practice" aria-label="Accessibility practices"></section>
+    <section class="card-grid" data-resource-catalog="practice" aria-label="Prácticas de accesibilidad"></section>
   </main>
 </body>
 </html>

@@ -8,10 +8,10 @@
 
 .brand-bar {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
   align-items: center;
-  gap: var(--space-lg);
-  padding: 1.55rem clamp(5.5rem, 4vw, 4rem);
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: 1.25rem clamp(1rem, 3vw, 4rem) 1.25rem clamp(5.5rem, 6vw, 9rem);
   color: var(--color-surface);
   background-color: var(--color-primary);
 }
@@ -21,18 +21,12 @@
 }
 
 .site-title {
-  grid-column: 1 / -1;
-  grid-row: 1;
   margin: 0;
-  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
   font-weight: 500;
   letter-spacing: 0.04em;
+  white-space: nowrap;
 }
-
-.language-switch { display: flex; align-items: center; gap: 0.25rem; grid-column: 1; grid-row: 2; }
-.language-switch button { min-height: 44px; padding: 0.4rem 0.65rem; font: inherit; font-size: 0.85rem; color: #fff; background: transparent; border: 1px solid #ffffff80; border-radius: 0.3rem; cursor: pointer; }
-.language-switch button[aria-pressed="true"] { color: #18529d; background: #fff; font-weight: 700; }
-.language-switch button:focus-visible { outline: 3px solid #ffcc00; outline-offset: 3px; }
 
 .site-title a,
 .university-name {
@@ -62,19 +56,31 @@
 
 .site-subtitle {
   margin: 0;
-  padding-left: var(--space-lg);
+  padding-left: clamp(1rem, 2vw, 2rem);
   border-left: 2px solid var(--color-focus);
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 0.9vw, 0.9rem);
   font-style: italic;
   font-weight: 500;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .university-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   margin-left: auto;
   font-size: 0.9rem;
   letter-spacing: 0.04em;
   white-space: nowrap;
+}
+
+.university-name img {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
+  flex: none;
 }
 
 .main-nav {
@@ -136,7 +142,7 @@
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
   .site-header {
     position: static;
   }
@@ -152,6 +158,11 @@
   .site-subtitle {
     padding-left: 0;
     border-left: 0;
+    white-space: normal;
+  }
+
+  .site-title {
+    white-space: normal;
   }
 
   .university-name {

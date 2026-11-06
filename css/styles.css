@@ -554,8 +554,6 @@ input:focus-visible {
   box-shadow: var(--shadow-sm);
 }
 
-.resource-card--experiment { border: 2px solid #18529d; border-top-width: 6px; background: #eff7fe; }
-.experiment-badge { display: block; color: #113362; font-weight: 800; font-size: .8rem; margin-bottom: .5rem; }
 
 .card-heading {
   display: grid;
@@ -835,58 +833,267 @@ input:focus-visible {
   font-weight: 800;
 }
 
-.example-comparison {
+.resource-detail-layout #example {
+  scroll-margin-top: 1rem;
+}
+
+@media (min-width: 1201px) {
+  .resource-detail-layout #example {
+    scroll-margin-top: calc(var(--site-header-height, 8rem) + 1rem);
+  }
+}
+
+.worked-example {
+  margin: 0 0 1rem;
+  padding: clamp(0.7rem, 2vw, 1rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #f7f8fa;
+  overflow-wrap: anywhere;
+}
+
+.worked-example figcaption {
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.worked-example-meta {
+  color: #525b66;
+  font-size: 0.9rem;
+}
+
+.worked-example a,
+.worked-example-route a,
+#example .worked-example-meta a {
+  color: var(--color-accent);
+  text-underline-offset: 0.15em;
+}
+
+.worked-example-record,
+.worked-example-table,
+.worked-example-screen,
+.worked-example-code {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.worked-example-record {
+  margin: 0;
+}
+
+.worked-example-record > div {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 0.2rem 0.75rem;
+  padding: 0.55rem 0.65rem;
 }
 
-.example-panel {
-  min-width: 0;
-  padding: var(--space-md);
-  border: 2px solid var(--color-border);
-  border-top-width: 6px;
+.worked-example-record > div + div {
+  border-top: 1px solid var(--color-border);
 }
 
-.example-panel--bad {
-  background-color: #fff6f3;
-  border-top-color: #b33a2b;
+.worked-example-record dt {
+  font-weight: 700;
 }
 
-.example-panel--good {
-  background-color: #f0f8f2;
-  border-top-color: #26733c;
+.worked-example-record dd {
+  margin: 0;
 }
 
-.example-panel h3 {
-  margin: 0 0 var(--space-sm);
+.worked-example-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.worked-example-table th,
+.worked-example-table td {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  vertical-align: top;
+  text-align: start;
+}
+
+.worked-example-table thead th {
+  background: #eceff2;
+}
+
+.worked-example-cell-label {
+  display: none;
+}
+
+.worked-example-flow,
+.worked-example-description,
+.worked-example-route ol {
+  margin: 0;
+  padding-inline-start: 1.4rem;
+}
+
+.worked-example-flow li,
+.worked-example-description li,
+.worked-example-route li {
+  margin-bottom: 0.45rem;
+}
+
+.worked-example-flow strong,
+.worked-example-flow span,
+.worked-example-control span {
+  display: block;
+}
+
+.worked-example-screens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 0.65rem;
+}
+
+.worked-example-screen {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: 0.6rem;
+  padding: 0.7rem;
+}
+
+.worked-example-screen h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.worked-example-control--field {
+  width: 100%;
+}
+
+.worked-example-control--field span {
+  margin-top: 0.25rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #737d88;
+  border-radius: var(--radius-sm);
+}
+
+.worked-example-control--action,
+.worked-example-control--focus,
+.worked-example-control--help {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #737d88;
+  border-radius: var(--radius-sm);
+}
+
+.worked-example-control--action,
+.worked-example-control--focus {
+  color: var(--color-accent);
+  background: var(--color-surface);
+}
+
+.worked-example-control--help {
+  background: #f7f8fa;
+}
+
+.worked-example-control--focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (min-width: 560px) {
+  .worked-example-screen--columns {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .worked-example-screen--columns h3 {
+    grid-column: 1 / -1;
+  }
+
+  .worked-example-screen--columns .worked-example-control {
+    grid-column: 1;
+  }
+
+  .worked-example-screen--columns .worked-example-control--help {
+    grid-column: 2;
+    grid-row: 2 / span 3;
+  }
+}
+
+.worked-example-code {
+  margin: 0;
+  padding: 0.65rem;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.worked-example-code + .worked-example-screens,
+.worked-example-screens + .worked-example-meta,
+.worked-example-diagram + .worked-example-meta {
+  margin-top: 0.6rem;
+}
+
+.worked-example-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+}
+
+.worked-example-route {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.worked-example-detail {
+  margin: 1rem 0;
+  overflow-wrap: anywhere;
+}
+
+.worked-example-detail h3,
+.worked-example-route h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.worked-example-detail h4 {
+  margin: 0.85rem 0 0.35rem;
   font-size: 1rem;
 }
 
-.example-panel h3::before {
-  display: inline-block;
-  margin-right: 0.4rem;
-  font-weight: 900;
-}
+@media (max-width: 560px) {
+  .worked-example-record > div {
+    grid-template-columns: 1fr;
+  }
 
-.example-panel--bad h3::before {
-  content: "×";
-}
+  .worked-example-table {
+    display: block;
+    background: transparent;
+    border: 0;
+  }
 
-.example-panel--good h3::before {
-  content: "✓";
-}
+  .worked-example-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
 
-.example-panel pre {
-  max-width: 100%;
-  margin: 0 0 var(--space-md);
-  padding: var(--space-sm);
-  overflow-x: auto;
-  white-space: pre-wrap;
-  color: #111111;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  font: 0.88rem/1.5 Consolas, "Courier New", monospace;
+  .worked-example-table :is(tbody, tr, th, td, .worked-example-cell-label) {
+    display: block;
+  }
+
+  .worked-example-table tbody tr {
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  .worked-example-table tbody :is(th, td) {
+    border: 0;
+  }
+
+  .worked-example-table tbody th {
+    background: #eceff2;
+  }
 }
 
 .resource-links {
@@ -1046,7 +1253,6 @@ input:focus-visible {
     position: static;
   }
 
-  .example-comparison,
   .phase-overview,
   .student-pathway {
     grid-template-columns: 1fr;

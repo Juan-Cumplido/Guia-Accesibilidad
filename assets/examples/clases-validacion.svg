@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 158">
+  <title>Clases de inscripción, campos y errores</title>
+  <rect width="670" height="158" fill="#fff"/>
+  <g fill="#f6f8fa" stroke="#273448" stroke-width="1.5">
+    <rect x="12" y="30" width="166" height="108"/>
+    <rect x="244" y="30" width="164" height="108"/>
+    <rect x="478" y="30" width="180" height="108"/>
+    <path d="M12 65h166m66 0h164m70 0h180M178 97h66m164 0h70"/>
+  </g>
+  <g fill="#273448" font-family="Arial, sans-serif" font-size="15">
+    <g text-anchor="middle" font-weight="bold">
+      <text x="95" y="53">Inscripción</text>
+      <text x="326" y="53">Campo</text>
+      <text x="568" y="53">ErrorDeCampo</text>
+    </g>
+    <text x="24" y="88">folio: String</text>
+    <text x="256" y="88">id: String</text>
+    <text x="256" y="111">etiqueta: String</text>
+    <text x="490" y="88">código: String</text>
+    <text x="490" y="111">mensaje: String</text>
+    <text x="183" y="90">1</text>
+    <text x="213" y="90">1..*</text>
+    <text x="414" y="90">1</text>
+    <text x="447" y="90">0..*</text>
+  </g>
+</svg>

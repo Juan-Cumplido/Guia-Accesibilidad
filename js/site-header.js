@@ -15,13 +15,13 @@ if (currentPath === "artifacts.html" || pathSegments.includes("artifacts")) {
 }
 
 const navigationItems = [
-  { id: "home", label: "Home", href: "index.html" },
-  { id: "requirements", label: "Requirements", href: "requirements.html" },
-  { id: "design", label: "Design", href: "design.html" },
-  { id: "implementation", label: "Implementation", href: "implementation.html" },
-  { id: "testing", label: "Testing", href: "testing.html" },
-  { id: "artifacts", label: "Artifacts", href: "artifacts.html" },
-  { id: "practices", label: "Practices", href: "practices.html" }
+  { id: "home", label: "Inicio", href: "index.html" },
+  { id: "requirements", label: "Requisitos", href: "requirements.html" },
+  { id: "design", label: "Diseño", href: "design.html" },
+  { id: "implementation", label: "Implementación", href: "implementation.html" },
+  { id: "testing", label: "Pruebas", href: "testing.html" },
+  { id: "artifacts", label: "Artefactos", href: "artifacts.html" },
+  { id: "practices", label: "Prácticas", href: "practices.html" }
 ];
 
 const navigationMarkup = navigationItems
@@ -34,23 +34,15 @@ const navigationMarkup = navigationItems
 document.querySelectorAll(".site-header").forEach((header) => {
   header.innerHTML = `
     <div class="brand-bar">
-      <div class="language-switch" role="group" aria-label="Language" data-no-translate>
-        <button type="button" data-language="es" lang="es" aria-pressed="true">Español</button>
-        <button type="button" data-language="en" lang="en" aria-pressed="false">English</button>
-      </div>
-      <h1 class="site-title"><a href="${siteHref("index.html")}">Web Accessibility Practices Guide (WAPG)</a></h1>
-      <p class="site-subtitle">How to integrate web accessibility into software development</p>
-      <a class="university-name" href="https://www.uv.mx/">Universidad Veracruzana</a>
+      <h1 class="site-title"><a href="${siteHref("index.html")}">Guía Práctica de Accesibilidad Web (GPAW)</a></h1>
+      <p class="site-subtitle">Cómo integrar la accesibilidad web en el desarrollo de software</p>
+      <a class="university-name" href="https://www.uv.mx/"><img src="${siteHref("assets/LogotipoUV.png")}" alt="" width="36" height="36" />Universidad Veracruzana</a>
     </div>
 
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="main-nav" aria-label="Navegación principal">
       <ul>${navigationMarkup}</ul>
     </nav>
   `;
-});
-
-document.querySelectorAll("[data-language]").forEach((button) => {
-  button.addEventListener("click", () => window.WAPG_I18N.setLanguage(button.dataset.language));
 });
 
 const primaryHeader = document.querySelector(".site-header");
@@ -66,7 +58,7 @@ document.body.id = document.body.id || "top";
 const backToTop = document.createElement("a");
 backToTop.className = "back-to-top";
 backToTop.href = "#top";
-backToTop.innerHTML = '<span aria-hidden="true">↑</span> Back to Top';
+backToTop.innerHTML = '<span aria-hidden="true">↑</span> Volver arriba';
 document.body.append(backToTop);
 
 const updateBackToTopVisibility = () => {

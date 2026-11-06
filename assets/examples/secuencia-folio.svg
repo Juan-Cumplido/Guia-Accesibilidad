@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 286">
+  <title>D-05 · Secuencia de guardado y anuncio del folio</title>
+  <defs>
+    <marker id="call" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0l8 4.5L0 9z" fill="#273448"/>
+    </marker>
+    <marker id="reply" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1 1l8 4-8 4" fill="none" stroke="#273448"/>
+    </marker>
+  </defs>
+  <rect width="650" height="286" fill="#fff"/>
+  <g stroke="#273448" stroke-width="1.5">
+    <path d="M103 58v212m222-212v212m222-212v212" stroke-dasharray="5 5"/>
+    <g fill="#f6f8fa">
+      <rect x="16" y="15" width="174" height="44"/>
+      <rect x="232" y="15" width="186" height="44"/>
+      <rect x="458" y="15" width="178" height="44"/>
+    </g>
+    <path d="M103 104h222" marker-end="url(#call)"/>
+    <path d="M103 225h444" marker-end="url(#call)"/>
+    <path d="M325 156H103" stroke-dasharray="5 4" marker-end="url(#reply)"/>
+  </g>
+  <g fill="#273448" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="103" y="43">: Formulario</text>
+    <text x="325" y="43">: ServicioTalleres</text>
+    <text x="547" y="43">: RegiónDeEstado</text>
+    <text x="214" y="96">guardar(datos)</text>
+    <text x="214" y="148">folio = A-104</text>
+    <text x="325" y="217">mostrarFolio(A-104)</text>
+  </g>
+</svg>

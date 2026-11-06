@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 168">
+  <title>Objetos del caso de validación de correo</title>
+  <rect width="670" height="168" fill="#fff"/>
+  <g fill="#f6f8fa" stroke="#273448" stroke-width="1.5">
+    <rect x="12" y="17" width="241" height="134"/>
+    <rect x="293" y="17" width="365" height="134"/>
+    <path d="M12 55h241m40 0h365M253 87h40"/>
+  </g>
+  <g fill="#273448" font-family="Arial, sans-serif" font-size="15">
+    <text x="132.5" y="41" text-anchor="middle" text-decoration="underline">correo : Campo</text>
+    <text x="475" y="41" text-anchor="middle" text-decoration="underline">error01 : ErrorDeCampo</text>
+    <text x="25" y="84">id = "correo"</text>
+    <text x="25" y="108">etiqueta = "Correo institucional"</text>
+    <text x="306" y="84">código = "CORREO_INVALIDO"</text>
+    <text x="306" y="108">mensaje = "Ingresa un correo con @ y dominio."</text>
+  </g>
+</svg>

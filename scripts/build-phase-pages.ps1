@@ -23,6 +23,8 @@ $phases = @(
 foreach ($phase in $phases) {
   $slug = $phase.Slug
   $title = $phase.Title
+  $phaseImages = @{ requirements = 'read-first-guide-requirements.png'; design = 'read-first-guide-desing.png'; implementation = 'read-first-guide-implementation.png'; testing = 'read-first-guide-test.png' }
+  $phaseImage = $phaseImages[$slug]
   $actionItems = ($phase.Actions | ForEach-Object { "<li>$_</li>" }) -join ""
   $testingMethods = if ($slug -eq "testing") { @"
     <section class="testing-methods" aria-labelledby="testing-evidence-title">
@@ -40,16 +42,13 @@ foreach ($phase in $phases) {
 
   $html = @"
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
   <title>$title | WAPG</title>
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/site-header.css" />
-  <script src="./js/translations-es.js" defer></script>
-  <script src="./js/resource-translations-es.js" defer></script>
-  <script src="./js/i18n.js" defer></script>
   <script src="./js/site-header.js" defer></script>
   <script src="./js/resource-data.js" defer></script>
   <script src="./js/catalog-renderer.js" defer></script>
@@ -61,7 +60,7 @@ foreach ($phase in $phases) {
   <main id="main-content" class="page-shell">
     <h1 class="page-title">$title</h1>
     <section class="read-first" aria-labelledby="$slug-challenge-title">
-      <img src="./assets/read-first-guide.png" alt="Illustration of a woman presenting an accessibility challenge in the $slug phase" />
+      <img src="./assets/$phaseImage" alt="Illustration of a woman presenting an accessibility challenge in the $slug phase" />
       <div><h2 id="$slug-challenge-title">Read this first: the $slug barrier</h2><p>$($phase.Challenge)</p></div>
     </section>
     <section class="phase-overview" aria-labelledby="$slug-actions-title">

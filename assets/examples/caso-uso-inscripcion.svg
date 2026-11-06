@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 240">
+  <title>CU-03 · Casos de uso del portal de talleres</title>
+  <defs>
+    <marker id="include" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1 1l8 4-8 4" fill="none" stroke="#273448"/>
+    </marker>
+  </defs>
+  <rect width="620" height="240" fill="#fff"/>
+  <g fill="none" stroke="#273448" stroke-width="1.5">
+    <rect x="158" y="12" width="448" height="216"/>
+    <circle cx="73" cy="77" r="12"/>
+    <path d="M73 89v39m-24-24h48m-24 24-19 24m19-24 19 24"/>
+    <path d="M97 104h167"/>
+    <ellipse cx="382" cy="104" rx="118" ry="26"/>
+    <ellipse cx="382" cy="190" rx="109" ry="25"/>
+    <path d="M382 130v35" stroke-dasharray="5 4" marker-end="url(#include)"/>
+  </g>
+  <g fill="#273448" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="73" y="176">Estudiante</text>
+    <text x="382" y="40" font-weight="bold">Portal de talleres</text>
+    <text x="382" y="110">Revisar inscripción</text>
+    <text x="436" y="152">«include»</text>
+    <text x="382" y="196">Mostrar datos</text>
+  </g>
+</svg>

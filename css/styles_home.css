@@ -588,7 +588,8 @@ main {
   }
 
   .hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
     padding-inline: 2rem;
   }
 
@@ -597,8 +598,8 @@ main {
   }
 
   .hero-visual {
-    width: min(24rem, 90%);
-    margin: -2rem auto 0;
+    width: min(100%, 64vw, 22rem);
+    margin: 0 auto;
   }
 
   .hero-visual img {
